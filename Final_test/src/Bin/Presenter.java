@@ -19,8 +19,8 @@ public class Presenter {
     private final static CreatePack createPack = new CreatePack();
 
 
-    public static void Run() {
-        int flagType, choiceType, menuFlag, flagTypeMenu, choiceHowView;
+    public static void Run() throws ParseException {
+        int flagType, menuFlag, flagTypeMenu, choiceType, choiceHowView;
         int choice = 0;
         int flag = 0;
         List<Animals> pets = new ArrayList<>();
@@ -63,46 +63,54 @@ public class Presenter {
             } else if (choice == 2) {
                 flagTypeMenu = 0;
                 while (flagTypeMenu == 0) {
-                    //выбор способа вывода списка комманд
-                    choiceHowView = vw.howViewCommands();
-                    if (choiceHowView == 3) {
+                    if (pets.isEmpty() & pack.isEmpty()) {
+                        vw.info("\nDatabase is empty! Add animals!");
                         break;
                     }
-                    flagType = 0;
-                    while (flagType == 0) {
-                        //выбор типа животного
-                        choiceType = vw.animalTypeChoice();
+                    //выбор способа вывода списка комманд
+                    choiceHowView = vw.howViewCommands();
+                    if (choiceHowView == 1) {
+                        vw.viewPetsCommands(pets);
+                        vw.viewPackCommands(pack);
+                        break;
+                    } else if (choiceHowView == 2) {
+                        flagType = 0;
+                        while (flagType == 0) {
+                            //выбор типа животного
+                            choiceType = vw.animalTypeChoice();
 
-                        //продолжение работы программы в зависимости от выбора типа животного
-                        if (choiceType == 1) {
-                            if (choiceHowView == 1) {
-
-                            } else if (choiceHowView == 2) {
-
+                            //продолжение работы программы в зависимости от выбора типа животного
+                            if (choiceType == 1) {
+                                vw.viewPetsCommands(pets);
+                                flagTypeMenu = 1;
+                                break;
+                            } else if (choiceType == 2) {
+                                vw.viewPackCommands(pack);
+                                flagTypeMenu = 1;
+                                break;
+                            } else if (choiceType == 3) {
+                                flagType = 1;
                             }
-                        } else if (choiceType == 2) {
-                            if (choiceHowView == 1) {
-
-                            } else if (choiceHowView == 2) {
-
-                            }
-                        } else if (choiceType == 3) {
-                            flagType = 1;
                         }
+                    } else {
+                        flagTypeMenu = 1;
                     }
                 }
             } else if (choice == 3) {
+                choiceType = vw.animalTypeChoice();
+                if (choiceType == 1){
+                    
+                } else if (choiceType == 2) {
 
+                }
             } else if (choice == 4) {
 
             } else if (choice == 5) {
 
             } else if (choice == 6) {
-                exit(0);
+                flag = 1;
             }
         }
+        exit(0);
     }
-
-    //метод для проверки правильности выбора пользователем пункта меню
-
 }

@@ -52,33 +52,35 @@ public class test {
 //            System.out.println("Fuck");
 //        }
 
-        String[] com = new String[2];
+//        String[] com = new String[2];
+//        List<Animals> pets = new ArrayList<>();
+//        com[0] = "aaaa";
+//        com[1] = "bbb";
+//        List<String> comss = new ArrayList<>(Arrays.asList(com));
+//        CreateAnimal ca = new CreateAnimal();
+//        pets.add(ca.CreateAnimal("cat", "Bars","11.12.12", comss));
+//        pets.add(ca.CreateAnimal("dog","Move", "12.11.20", comss));
+//        for (Animals a: pets) {
+//            System.out.println(a.getType()+" "+a.getName()+" "+a.getDb()+" "+a.getCommands());
+//        }
+//        System.out.println(pets.size());
+//        String[] newC = new String[2];
+//        newC[0] = "ccc";
+//        newC[1] = "gg";
+//        comss = pets.get(0).getListCommands();
+//        for (String s:newC
+//             ) {
+//            pets.get(0).addCommands(s);
+//        }
+//        //comss.addAll(Arrays.asList(newC));
+//        //coms.add(Arrays.toString(newC));
+//        //pets.get(0).addCommands(Arrays.toString(newC));
+//        //pets.get(0).addCommands(newC);
+//        for (Animals a: pets) {
+//            System.out.println(a.getType()+" "+a.getName()+" "+a.getDb()+" "+a.getCommands());
+//        }
         List<Animals> pets = new ArrayList<>();
-        com[0] = "aaaa";
-        com[1] = "bbb";
-        List<String> comss = new ArrayList<>(Arrays.asList(com));
-        CreateAnimal ca = new CreateAnimal();
-        pets.add(ca.CreateAnimal("cat", "Bars","11.12.12", comss));
-        pets.add(ca.CreateAnimal("dog","Move", "12.11.20", comss));
-        for (Animals a: pets) {
-            System.out.println(a.getType()+" "+a.getName()+" "+a.getDb()+" "+a.getCommands());
-        }
-        System.out.println(pets.size());
-        String[] newC = new String[2];
-        newC[0] = "ccc";
-        newC[1] = "gg";
-        comss = pets.get(0).getListCommands();
-        for (String s:newC
-             ) {
-            pets.get(0).addCommands(s);
-        }
-        //comss.addAll(Arrays.asList(newC));
-        //coms.add(Arrays.toString(newC));
-        //pets.get(0).addCommands(Arrays.toString(newC));
-        //pets.get(0).addCommands(newC);
-        for (Animals a: pets) {
-            System.out.println(a.getType()+" "+a.getName()+" "+a.getDb()+" "+a.getCommands());
-        }
+        System.out.println("fuck");
 
     }
 
