@@ -10,9 +10,8 @@ public class AnimalTypeChoice {
         int flagType = 0;
         int choiceType = 0;
         while (flagType == 0) {
-            System.out.println();
             System.out.println("""
-                Choose type animal:
+                \nChoose type animal:
                 1 - Pets;
                 2 - Pack animals;
                 3 - Cancel.

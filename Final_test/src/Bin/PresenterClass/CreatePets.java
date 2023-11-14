@@ -4,15 +4,14 @@ import Bin.Class.*;
 import Bin.Model;
 import Bin.View;
 
-import java.util.List;
+import java.text.ParseException;
 
 public class CreatePets {
-    private final static AnimalDataEnter ade = new AnimalDataEnter();
     private final static Model md = new Model();
     private final static View vw = new View();
     private final static CheckChoice cc = new CheckChoice();
 
-    public Animals createPets() {
+    public Animals createPets() throws ParseException {
         int type = 0;
         int flagAnimal = 0;
 
@@ -26,13 +25,13 @@ public class CreatePets {
         }
 
         if (type == 1) {
-            return md.createAnimal("Cat", ade.animalName(), ade.animalDateBirthday(), ade.animalCommands());
+            return md.createAnimal("Cat", vw.animalNameEnter(), vw.animalDateEnter(), vw.animalCommandsEnter());
         } else if (type == 2) {
-            return md.createAnimal("Dog", ade.animalName(), ade.animalDateBirthday(), ade.animalCommands());
+            return md.createAnimal("Dog", vw.animalNameEnter(), vw.animalDateEnter(), vw.animalCommandsEnter());
         } else if (type == 3) {
-            return md.createAnimal("Hamster", ade.animalName(), ade.animalDateBirthday(), ade.animalCommands());
+            return md.createAnimal("Hamster", vw.animalNameEnter(), vw.animalDateEnter(), vw.animalCommandsEnter());
         } else if (type == 4) {
-            return md.createAnimal("Parrot", ade.animalName(), ade.animalDateBirthday(), ade.animalCommands());
+            return md.createAnimal("Parrot", vw.animalNameEnter(), vw.animalDateEnter(), vw.animalCommandsEnter());
         }
         return null;
     }

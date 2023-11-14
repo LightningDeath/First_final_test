@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class PetsChoice {
     public int petsChoice() throws RuntimeException{
         Scanner in = new Scanner(System.in);
-        System.out.println();
         System.out.println("""
-                Choose animal:
+                \nChoose animal:
                 1 - Cat;
                 2 - Dog;
                 3 - Hamster;

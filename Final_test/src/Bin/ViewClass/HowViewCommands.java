@@ -10,9 +10,8 @@ public class HowViewCommands {
         int choiceType = 0;
         Scanner in = new Scanner(System.in);
         while (flagType == 0) {
-            System.out.println();
             System.out.println("""
-                Choose type animal:
+                \nChoose type animal:
                 1 - All commands of all animals;
                 2 - Commands for a specific animal;
                 3 - Cancel.

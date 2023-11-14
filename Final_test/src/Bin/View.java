@@ -1,4 +1,6 @@
 package Bin;
+
+import Bin.Class.Animals;
 import Bin.ViewClass.*;
 
 import java.text.ParseException;
@@ -14,36 +16,51 @@ public class View {
     private final static AnimalCommandsEnter ace = new AnimalCommandsEnter();
     private final static PackChoice pc = new PackChoice();
     private final static HowViewCommands hwc = new HowViewCommands();
+    private final static ViewPetsCommands vpec = new ViewPetsCommands();
+    private final static ViewPackCommands vpac = new ViewPackCommands();
 
-    public Integer animalTypeChoice(){
+    public void viewPackCommands(List<Animals> pack) {
+        vpac.viewPackCommands(pack);
+    }
+
+    public void viewPetsCommands(List<Animals> pets) {
+        vpec.viewPetsCommands(pets);
+    }
+
+    public Integer animalTypeChoice() {
         return atp.animalTypeChoice();
     }
 
-    public Integer menu() throws RuntimeException{
+    public Integer menu() throws RuntimeException {
         return m.menu();
     }
 
-    public void info(String message){
+    public void info(String message) {
         i.info(message);
     }
 
-    public int petsChoice() throws RuntimeException{
+    public int petsChoice() throws RuntimeException {
         return ac.petsChoice();
     }
-    public int packChoice() throws RuntimeException{
+
+    public int packChoice() throws RuntimeException {
         return pc.packChoice();
     }
-    public String animalNameEnter(){
+
+    public String animalNameEnter() {
         return an.animalNameEnter();
     }
 
     public String animalDateEnter() throws ParseException {
         return ad.animalDateEnter();
     }
-    public List<String> animalCommandsEnter() throws RuntimeException{
+
+    public List<String> animalCommandsEnter() throws RuntimeException {
         return ace.animalCommandsEnter();
     }
-    public Integer howViewCommands(){
+
+    public Integer howViewCommands() {
         return hwc.howViewCommands();
     }
+
 }
