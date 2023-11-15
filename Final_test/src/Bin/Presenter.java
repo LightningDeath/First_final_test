@@ -20,7 +20,7 @@ public class Presenter {
 
 
     public static void Run() throws ParseException {
-        int flagType, menuFlag, flagTypeMenu, choiceType, choiceHowView;
+        int flagType, menuFlag, flagTypeMenu, choiceType, choiceHowView, animalNumber, counter;
         int choice = 0;
         int flag = 0;
         List<Animals> pets = new ArrayList<>();
@@ -99,14 +99,26 @@ public class Presenter {
             } else if (choice == 3) {
                 choiceType = vw.animalTypeChoice();
                 if (choiceType == 1){
-                    
+                    vw.viewPetsCommands(pets);
+                    animalNumber = vw.animalChoice(pets.size());
+                    md.addCommands(pets.get(animalNumber), vw.animalCommandsEnter());
+                    vw.info("\nCommand added successfully!\n");
                 } else if (choiceType == 2) {
-
+                    vw.viewPetsCommands(pack);
+                    animalNumber = vw.animalChoice(pack.size());
+                    md.addCommands(pack.get(animalNumber), vw.animalCommandsEnter());
+                    vw.info("\nCommand added successfully!\n");
                 }
             } else if (choice == 4) {
-
+                String date = vw.animalDateEnter();
+                counter = vw.showAnimalsByDate(pets, date);
+                counter = counter + vw.showAnimalsByDate(pack, date);
+                if (counter == 0){
+                    System.out.println("\nNo animals found with this date of birth!");
+                }
             } else if (choice == 5) {
-
+                vw.info("\nNumber of animals in the database: ");
+                vw.info(md.counterAnimal(pets, pack).toString());
             } else if (choice == 6) {
                 flag = 1;
             }

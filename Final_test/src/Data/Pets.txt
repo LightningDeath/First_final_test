@@ -1,0 +1,1 @@
+cat Bars 11.12.2020 aaaa,bbb,ccc,gg

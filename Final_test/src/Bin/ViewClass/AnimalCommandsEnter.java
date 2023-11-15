@@ -14,9 +14,9 @@ public class AnimalCommandsEnter {
         while (flag == 0) {
             System.out.print("\nEnter commands separated by commas or spaces: ");
             commands = in.nextLine();
-            parsCommands = commands.split(", | \\s");
             commands = commands.toLowerCase();
             if (commands.matches("[a-z,\\s]+")) {
+                parsCommands = commands.split(", | \\s");
                 flag = 1;
             }else {
                 System.out.println("""
