@@ -5,9 +5,8 @@ import java.util.Scanner;
 public class PackChoice {
     public int packChoice() throws RuntimeException{
         Scanner in = new Scanner(System.in);
-        System.out.println();
         System.out.println("""
-                Choose animal:
+                \nChoose animal:
                 1 - Horse;
                 2 - Camel;
                 3 - Donkey;

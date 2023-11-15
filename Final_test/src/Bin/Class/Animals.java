@@ -1,14 +1,12 @@
 package Bin.Class;
 
-import Bin.ViewClass.Info;
-
 import java.util.*;
 
 public class Animals {
     private final String name;
     private final String type;
     private final String db;
-    //private final int flag;
+
     private final List<String> commands;
 
 
@@ -17,12 +15,7 @@ public class Animals {
         this.name = name;
         this.db = dateBirth;
         this.commands = commands;
-        //this.flag = flag;
     }
-
-//    public int getFlag() {
-//        return this.flag;
-//    }
 
     public String getName() {
         return name;
@@ -40,9 +33,6 @@ public class Animals {
         return type;
     }
 
-    public List<String> getListCommands() {
-        return this.commands;
-    }
 
     public void addCommands(String com) {
         this.commands.add(com);
