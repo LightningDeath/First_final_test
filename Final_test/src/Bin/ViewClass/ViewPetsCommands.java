@@ -12,8 +12,8 @@ public class ViewPetsCommands {
             System.out.println("Empty");
         } else {
             for (Animals a : pets) {
-                System.out.println(counter + ". Type: " + a.getType() + " Name: " + a.getName() +
-                        " Commands: " + a.getCommands());
+                System.out.println(counter + ". Type: " + a.getType() + "\n   Name: " + a.getName() +
+                        "\n   Commands: " + a.getCommands());
                 counter += 1;
             }
         }

@@ -4,7 +4,6 @@ import Bin.Class.*;
 import Bin.View;
 import Bin.Model;
 
-import java.text.ParseException;
 
 public class CreatePack {
 
@@ -12,7 +11,7 @@ public class CreatePack {
     private final static View vw = new View();
     private final static Model md = new Model();
 
-    public Animals createPack() throws ParseException {
+    public Animals createPack(){
         int type = 0;
         int flagAnimal = 0;
 

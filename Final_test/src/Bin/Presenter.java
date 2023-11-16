@@ -1,11 +1,11 @@
 package Bin;
 
 import Bin.Class.Animals;
+
 import Bin.PresenterClass.*;
 
 import Bin.Class.CheckChoice;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +19,19 @@ public class Presenter {
     private final static CreatePack createPack = new CreatePack();
 
 
-    public static void Run() throws ParseException {
+    public static void Run(){
         int flagType, menuFlag, flagTypeMenu, choiceType, choiceHowView, animalNumber, counter;
         int choice = 0;
         int flag = 0;
         List<Animals> pets = new ArrayList<>();
         List<Animals> pack = new ArrayList<>();
+
+        try {
+            pets = md.readFile("Pets.txt");
+            pack = md.readFile("Pack.txt");
+        } catch (RuntimeException e) {
+            System.out.println("Database load error! File not found.");
+        }
 
         while (flag == 0) {
             menuFlag = 0;
@@ -98,7 +105,7 @@ public class Presenter {
                 }
             } else if (choice == 3) {
                 choiceType = vw.animalTypeChoice();
-                if (choiceType == 1){
+                if (choiceType == 1) {
                     vw.viewPetsCommands(pets);
                     animalNumber = vw.animalChoice(pets.size());
                     md.addCommands(pets.get(animalNumber), vw.animalCommandsEnter());
@@ -113,7 +120,7 @@ public class Presenter {
                 String date = vw.animalDateEnter();
                 counter = vw.showAnimalsByDate(pets, date);
                 counter = counter + vw.showAnimalsByDate(pack, date);
-                if (counter == 0){
+                if (counter == 0) {
                     System.out.println("\nNo animals found with this date of birth!");
                 }
             } else if (choice == 5) {
@@ -122,6 +129,12 @@ public class Presenter {
             } else if (choice == 6) {
                 flag = 1;
             }
+        }
+        try {
+            md.writeFile(pets, "Pets.txt");
+            md.writeFile(pack, "Pack.txt");
+        } catch (RuntimeException e) {
+            System.out.println("Error saving database! File not found.");
         }
         exit(0);
     }

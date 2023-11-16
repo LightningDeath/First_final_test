@@ -1,0 +1,4 @@
+Camel Humpback 16.10.2015 sit,lie,walk,come
+Horse Wind 20.09.2010 stay,walk,gallop,trot,canter,come
+Cow Julie 11.02.2011 walk,eat,milk,come
+Donkey Pens 15.05.2015 walk,load,voice,come,eat

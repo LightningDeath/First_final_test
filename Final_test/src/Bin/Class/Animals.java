@@ -26,7 +26,7 @@ public class Animals {
     }
 
     public String getCommands() {
-        return String.join(",", this.commands);
+        return String.join(", ", this.commands);
     }
 
     public String getType() {

@@ -1,1 +1,4 @@
-cat Bars 11.12.2020 aaaa,bbb,ccc,gg
+Cat Barsik 11.12.2020 sit,pounce,eat,come,play
+Dog Jack 12.11.2015 sit,come,eat,forward,voice
+Parrot Talkative 15.12.2021 voice,wings,talk,sing
+Hamster Ball 11.10.2021 walk,eat,hide,roll

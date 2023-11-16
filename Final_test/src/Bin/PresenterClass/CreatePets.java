@@ -4,14 +4,14 @@ import Bin.Class.*;
 import Bin.Model;
 import Bin.View;
 
-import java.text.ParseException;
+
 
 public class CreatePets {
     private final static Model md = new Model();
     private final static View vw = new View();
     private final static CheckChoice cc = new CheckChoice();
 
-    public Animals createPets() throws ParseException {
+    public Animals createPets(){
         int type = 0;
         int flagAnimal = 0;
 
